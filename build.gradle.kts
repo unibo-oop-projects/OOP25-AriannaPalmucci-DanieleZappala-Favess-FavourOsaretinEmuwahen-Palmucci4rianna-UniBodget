@@ -4,14 +4,18 @@
  * This generated file contains a sample Java application project to get you started.
  * For more details on building Java & JVM projects, please refer to https://docs.gradle.org/9.2.1/userguide/building_java_projects.html in the Gradle documentation.
  */
-
 plugins {
     java
     application
     id("org.openjfx.javafxplugin") version "0.1.0"
     id("org.danilopianini.gradle-java-qa") version "1.155.0"
     id("com.diffplug.spotless") version "8.10.4"
+
+    id("org.danilopianini.unibo-oop-gradle-plugin") version "2.0.47"
 }
+
+java { toolchain { languageVersion.set(JavaLanguageVersion.of(25)) } }
+
 
 repositories {
     mavenCentral()
